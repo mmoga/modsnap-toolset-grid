@@ -1,0 +1,172 @@
+.ms-cards__container {
+  /* padding: 3rem; */
+}
+
+.ms-cards__container .ms-cards__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+}
+
+.ms-cards__container .ms-cards__wrapper .ms-card {
+  width: 25%;
+  margin: 0 0.5rem 1rem;
+}
+
+/* If CSS grid is supported, go with the grid, bb. */
+@supports (display: grid) {
+  .ms-cards__container .ms-cards__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 200px);
+    grid-auto-rows: 1fr;
+    grid-gap: 20px;
+  }
+  .ms-cards__container .ms-cards__wrapper .ms-card {
+    width: 100%;
+    margin: auto;
+  }
+}
+
+.ms-cards__container .ms-cards__wrapper .card-image {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.ms-cards__container .ms-cards__wrapper .card-image > img {
+  width: 100%;
+}
+
+.ms-open-button {
+  cursor: pointer;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CgogPGc+CiAgPHRpdGxlPmJhY2tncm91bmQ8L3RpdGxlPgogIDxyZWN0IGZpbGw9Im5vbmUiIGlkPSJjYW52YXNfYmFja2dyb3VuZCIgaGVpZ2h0PSI0MDIiIHdpZHRoPSI1ODIiIHk9Ii0xIiB4PSItMSIvPgogPC9nPgogPGc+CiAgPHRpdGxlPkxheWVyIDE8L3RpdGxlPgogIDxwb2x5bGluZSBpZD0ic3ZnXzEiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2U9IiNmZmZmZmYiIHBvaW50cz0iMjEsOC41IDEyLDE3LjUgMyw4LjUgIiBmaWxsPSJub25lIi8+CiA8L2c+Cjwvc3ZnPg==);
+  background-size: contain;
+  margin: auto;
+  top: 0;
+  right: 16px;
+  bottom: 0;
+}
+
+.ms-cards__container .ms-cards__wrapper .card-image > .image-caption {
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0.2rem 0.8rem;
+  background: #1f1f1f6c;
+}
+
+.ms-cards__container .ms-cards__wrapper .card-image > .image-caption:hover {
+  color: rgb(165, 165, 165);
+}
+
+.ms-cards__container
+  .ms-cards__wrapper
+  .card-image
+  > .image-caption:hover
+  > .ms-open-button {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CgogPGc+CiAgPHRpdGxlPmJhY2tncm91bmQ8L3RpdGxlPgogIDxyZWN0IGZpbGw9Im5vbmUiIGlkPSJjYW52YXNfYmFja2dyb3VuZCIgaGVpZ2h0PSI0MDIiIHdpZHRoPSI1ODIiIHk9Ii0xIiB4PSItMSIvPgogPC9nPgogPGc+CiAgPHRpdGxlPkxheWVyIDE8L3RpdGxlPgogIDxwb2x5bGluZSBpZD0ic3ZnXzEiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2U9IiNmMmQ1MDAiIHBvaW50cz0iMjEsOC41IDEyLDE3LjUgMyw4LjUgIiBmaWxsPSJub25lIi8+CiA8L2c+Cjwvc3ZnPg==);
+}
+
+.ms-cards__container .ms-cards__wrapper .card-image > .image-caption p {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+.ms-cards__container .ms-cards__wrapper .card-image > .image-caption h3 {
+  font-size: 20px;
+  margin: 0 0 1rem;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 0.33em;
+}
+
+.ms-cards__container .ms-cards__wrapper .ms-card-details {
+  display: none;
+  position: absolute;
+  right: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  padding-top: 1.2rem;
+  z-index: 1;
+}
+
+.ms-close-button {
+  cursor: pointer;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KCiA8Zz4KICA8dGl0bGU+YmFja2dyb3VuZDwvdGl0bGU+CiAgPHJlY3QgZmlsbD0ibm9uZSIgaWQ9ImNhbnZhc19iYWNrZ3JvdW5kIiBoZWlnaHQ9IjQwMiIgd2lkdGg9IjU4MiIgeT0iLTEiIHg9Ii0xIi8+CiA8L2c+CiA8Zz4KICA8dGl0bGU+TGF5ZXIgMTwvdGl0bGU+CiAgPHBvbHlnb24gZmlsbD0iIzk5OTk5OSIgaWQ9InN2Z18xIiBwb2ludHM9IjQ0NS4yLDEwOS4yIDQwMi44LDY2LjggMjU2LDIxMy42IDEwOS4yLDY2LjggNjYuOCwxMDkuMiAyMTMuNiwyNTYgNjYuOCw0MDIuOCAxMDkuMiw0NDUuMiAyNTYsMjk4LjQgNDAyLjgsNDQ1LjIgICA0NDUuMiw0MDIuOCAyOTguNCwyNTYgIi8+CiA8L2c+Cjwvc3ZnPg==);
+  background-size: contain;
+  top: 16px;
+  right: 16px;
+}
+
+.ms-cards__container
+  .ms-cards__wrapper
+  .ms-card.card-active
+  > .ms-card-details {
+  display: block;
+}
+
+.ms-cards__container .ms-cards__wrapper .ms-card.card-active .image-caption {
+  display: none;
+}
+
+.ms-card-details > .details__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 768px) {
+  .ms-card-details > .details__wrapper {
+    padding-right: 45px;
+  }
+}
+
+.ms-card-details > .details__wrapper > .details--left {
+  padding-left: 0.4rem;
+}
+
+.ms-card-details > .details__wrapper > .details--right {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.ms-card-details .details-heading {
+  text-transform: uppercase;
+}
+
+.ms-card-details .title {
+  margin: 0;
+}
+
+.ms-card-details .details-highlights {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 768px) {
+  .ms-card-details .details-content {
+    padding-right: 1em;
+  }
+  .ms-card-details > .details__wrapper > .details--left {
+    width: 60%;
+  }
+  .ms-card-details > .details__wrapper > .details--right {
+    width: 40%;
+  }
+}

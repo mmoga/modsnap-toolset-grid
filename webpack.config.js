@@ -1,5 +1,6 @@
 const defaultConfig = require('@wordpress/scripts/config/webpack.config');
 const { rules } = require('eslint-config-prettier');
+
 const path = require('path');
 
 module.exports = {
@@ -8,9 +9,10 @@ module.exports = {
     'modsnap-cards-block': './js/ms-cards-block.js',
   },
   output: {
-    path: path.join(__dirname, './build/js/'),
+    path: path.join(__dirname, '/build/js/'),
     filename: '[name].js',
   },
+
   module: {
     rules: [
       {
